@@ -8,8 +8,8 @@ namespace drink
 {
     internal class OrderItem
     {
-        public int index { get; set; }
-        public int quantity { get; set; }
-        public string subtotal { get; set; }
+        public int Index { get; set; }
+        public int Quantity { get; set; }
+        public int Subtotal { get; set; }
     }
 }
