@@ -54,7 +54,7 @@ namespace drink
             {
                 Console.Write("請輸入編號:");
                 s = Console.ReadLine();
-                if (s == "x")
+                if (s == "x" || isNaN(s)||int.Parse(s)<0||int.Parse(s)>5)
                 {
                     Console.WriteLine("謝謝惠顧，歡迎下次再來。");
                     break;
@@ -65,7 +65,7 @@ namespace drink
                     Drink drink = drinks[index];
                     Console.Write("請輸入數量:");
                     s=Console.ReadLine();
-                    if (s == "x")
+                    if (s == "x" || isNaN(s))
                     {
                         Console.WriteLine("謝謝惠顧，歡迎下次再來。");
                         break;
@@ -82,6 +82,19 @@ namespace drink
             }
             CalculateOrder(orders);
         }
+
+        private static bool isNaN(string? s)
+        {
+            for(int i = 0;i<s.Length;i++)
+            {
+                if (char.IsLetter(s[i]))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private static void show_drinks(List<Drink> drinks)
         {
             /*for(int i= 0; i < drinks.Count; i++)
