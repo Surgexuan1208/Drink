@@ -65,7 +65,7 @@ namespace drink
                     Drink drink = drinks[index];
                     Console.Write("請輸入數量:");
                     s=Console.ReadLine();
-                    if (s == "x" || isNaN(s))
+                    if (s == "x" || isNaN(s) || int.Parse(s)<1)
                     {
                         Console.WriteLine("謝謝惠顧，歡迎下次再來。");
                         break;
