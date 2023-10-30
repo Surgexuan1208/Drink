@@ -97,6 +97,7 @@ namespace drink
 
         private static void show_drinks(List<Drink> drinks)
         {
+
             /*for(int i= 0; i < drinks.Count; i++)
             {
                 Console.WriteLine($"飲料名稱:{drinks[i].name} 尺寸:{drinks[i].size} 價格:{drinks[i].price}");
